@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PokemonExcelBuilder": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)"
+    }
+  }
+}
