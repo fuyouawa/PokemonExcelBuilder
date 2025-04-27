@@ -2,7 +2,7 @@
 
 namespace PokemonExcelBuilder;
 
-public static class JsonExtension
+public static class Extension
 {
     public static string ToJson<T>(this T val)
     {
@@ -12,5 +12,10 @@ public static class JsonExtension
         }
 
         return JsonConvert.SerializeObject(val);
+    }
+
+    public static string ToExport(this IEnumerable<string> values)
+    {
+        return string.Join(", ", values);
     }
 }

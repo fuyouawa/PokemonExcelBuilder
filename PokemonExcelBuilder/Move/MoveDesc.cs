@@ -8,7 +8,7 @@ public class MoveDesc
     [DescProperty("世代")] public int Gen { get; set; }
     [DescProperty("威力")] public int BasePower { get; set; }
     [DescProperty("点数")] public int PP { get; set; }
-    [DescProperty("属性")] public string Type { get; set; }
+    [DescProperty("属性", Type = "PokeType")] public string Type { get; set; }
     [DescProperty("分类")] public string Category { get; set; }
     [DescProperty("目标")] public string Target { get; set; }
     [DescProperty("命中率")] public int Accuracy { get; set; }

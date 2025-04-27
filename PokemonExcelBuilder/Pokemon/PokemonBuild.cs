@@ -32,7 +32,7 @@ public static class PokemonBuild
                     ? pokemon.OtherFormes
                     : [pokemon.Forme]).Where(IsValidPokemon).ToJson(),
                 Abilities = pokemon.Abilities?.Select(x => x.Value).ToJson(),
-                Types = pokemon.Types.ToJson(),
+                Types = pokemon.Types.Select(CommonUtils.GetExportType).ToExport(),
                 Prevo = pokemon.Prevo,
                 Evos = pokemon.Evos?.Where(IsValidPokemon).ToJson(),
                 EvoLevel = pokemon.EvoLevel,

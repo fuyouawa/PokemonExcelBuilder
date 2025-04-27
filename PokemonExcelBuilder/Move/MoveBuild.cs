@@ -30,7 +30,7 @@ public static class MoveBuild
                 Num = move.Num,
                 BasePower = move.BasePower,
                 PP = move.Pp,
-                Type = move.Type,
+                Type = CommonUtils.GetExportType(move.Type),
                 Category = move.Category,
                 Target = move.Target,
                 Accuracy = move.Accuracy,

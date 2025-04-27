@@ -9,7 +9,7 @@ public class PokemonDesc
     [DescProperty("基础形态")] public string BaseForme { get; set; }
     [DescProperty("其他形态", IsList = true)] public string OtherFormes { get; set; }
     [DescProperty("能力", IsList = true)] public string Abilities { get; set; }
-    [DescProperty("类型", IsList = true)] public string Types { get; set; }
+    [DescProperty("类型", IsList = true, Type = "PokeType")] public string Types { get; set; }
     [DescProperty("进化前")] public string Prevo { get; set; }
     [DescProperty("进化")] public string Evos { get; set; }
     [DescProperty("进化等级")] public int EvoLevel { get; set; }

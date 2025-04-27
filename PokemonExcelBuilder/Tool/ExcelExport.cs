@@ -13,8 +13,8 @@ public static class ExcelExport
         [DescProperty("字段名")] public string PropertyName { get; set; }
         [DescProperty("字段类型")] public string PropertyType { get; set; }
         [DescProperty("数组切割")] public string ArraySplit { get; set; }
-        [DescProperty("值", EmptyIfZero = true)] public int Value { get; set; }
-        [DescProperty("索引", EmptyIfZero = true)] public bool IsIndex { get; set; }
+        [DescProperty("值")] public int Value { get; set; }
+        [DescProperty("索引")] public bool IsIndex { get; set; }
         [DescProperty("标记")] public string Tag { get; set; }
     }
 
@@ -34,7 +34,7 @@ public static class ExcelExport
                 ObjectType = excelType,
                 IdName = attr.Name,
                 PropertyName = property.Name,
-                PropertyType = GetPropertyType(property),
+                PropertyType = attr.Type ?? GetPropertyType(property),
                 ArraySplit = attr.IsList
                     ? ","
                     : string.Empty,
